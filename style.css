@@ -99,6 +99,11 @@ input {
 .icons img:hover {
     cursor: pointer;
 }
+#message {
+    margin-left: 25px;
+    margin-top: 10px;
+    color: red;
+}
 /****************
 aside
 ****************/
@@ -141,7 +146,7 @@ responsive for ipad
         right: -7vw;
     }
     section {
-        height: 65vh;
+        height: 55vh;
     }
     .bg-dots {
         margin-top: 5vh;
@@ -216,5 +221,24 @@ responsive for mob
         height: 46px;
         width: 100%;
         left: 0;
+    }
+    #message {
+        margin-left: 0px;
+    }
+}
+@media (max-height:568px) {
+    section div {
+        margin: 15px 0;
+    }
+    .bg-img {
+        height: 160vh;
+    }
+}
+@media (max-height:411px) and (max-width:823px) {
+    .bg-dots {
+        display: none;
+    }
+    section {
+        background: transparent;
     }
 }
