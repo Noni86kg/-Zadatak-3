@@ -1,0 +1,245 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --dirtyWhite: rgb(194, 203, 229);
+    --green: rgb(84, 230, 175);
+    --lightGray: rgb(90, 102, 138);
+    --gray: rgb(44, 52, 75);
+    --black: rgb(18, 23, 37);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    color: var(--dirtyWhite);
+    padding: 10vh 0;
+}
+h1 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: var(--green);
+    padding-top: 10vh;
+    font-weight: 100;
+}
+button {
+    height: 46px;
+    width: 162px;
+    background: var(--green);
+    color: var(--black);
+    border-radius: 23px;
+    border: none;
+    position: relative;
+    left: -172px;
+    font-weight: 900;
+}
+button:hover {
+    background: rgb(179, 255, 226);
+    cursor: pointer;
+}
+/****************
+main
+****************/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    right: -12vw;
+    z-index: 3;
+    width: 50%;
+    height: 80vh;
+}
+.top {
+    position: relative;
+    top: -28px;
+}
+main span {
+    color: var(--white);
+}
+section {
+    background: var(--black);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text p {
+    max-width: 60%;
+}
+#email {
+    background: var(--gray);
+    border: none;
+    line-height: 28px;
+    border-radius: 28px;
+    padding-left: 28px;
+    height: 56px;
+    width: 40%;
+    min-width: 400px;
+    font-weight: 900;
+    outline: 0;
+}
+#email::placeholder {
+    color: var(--lightGray);
+}
+input {
+    color: var(--white);
+}
+.icons img {
+    margin-right: 25px;
+}
+.icons img:hover {
+    cursor: pointer;
+}
+#message {
+    margin-left: 25px;
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
+}
+/****************
+aside
+****************/
+.bg-img {
+    background-image: url(assets/desktop/image-host.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 61%;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+}
+.bg-dots {
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    width: 232px;
+    height: 104px;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: calc(90vh - 52px);
+}
+/****************
+responsive for ipad
+****************/
+@media (min-width: 768px) and (max-width:1200px) {
+    main {
+        height: 75vh;
+    }
+    .bg-img {
+        background-image: url(assets/tablet/image-host.jpg);
+        top: 0;
+        width: 66%;
+        height: 85vh;
+    }
+    main {
+        width: 84%;
+        right: -7vw;
+    }
+    section {
+        height: 55vh;
+    }
+    .bg-dots {
+        margin-top: 5vh;
+        top: 85vh;
+        left: 6vw;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+/****************
+responsive for mob
+****************/
+@media (max-width: 767px) {
+    main {
+        align-items: center;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        height: 80vh;
+    }
+    .top {
+        top: 0;
+    }
+    section {
+        text-align: center;
+        background: transparent;
+        height: 70vh;
+    }
+    h1 {
+        padding-top: 5vh;
+        font-family: 'Chivo', sans-serif;
+        font-size: 26px;
+        line-height: 38px;
+    }
+    .text p {
+        max-width: 100%;
+    }
+    .bg-img {
+        background-image:  linear-gradient(rgba(18,23,37,.9), rgba(18,23,37,.9)),url(assets/mobile/image-host.jpg);
+        top: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    #email {
+        min-width: auto;
+    }
+    .bg-dots {
+        display: none;
+    }
+    section div:nth-child(3) {
+        order: 2;
+    }
+    section div:nth-child(4) {
+        order: 1;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .icons img {
+        height: 17px;
+        margin-right: 0;
+    }
+    #email {
+        height: 46px;
+        width: 100%;
+        margin: 15px 0;
+    }
+    button {
+        height: 46px;
+        width: 100%;
+        left: 0;
+    }
+    #message {
+        margin-left: 0px;
+    }
+}
+@media (max-height:568px) {
+    section div {
+        margin: 15px 0;
+    }
+    .bg-img {
+        height: 160vh;
+    }
+}
+@media (max-height:411px) and (max-width:823px) {
+    .bg-dots {
+        display: none;
+    }
+    section {
+        background: transparent;
+    }
+}
